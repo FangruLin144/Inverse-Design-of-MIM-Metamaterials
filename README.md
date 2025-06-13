@@ -4,18 +4,18 @@
 
 ## Future Work Directions
 
-0. Remove Any Known Bugs
+### 0. Remove Any Known Bugs
 
 For example, negative thicknesses and boundary clipping coherent with physical constraints.
 
-1. Modularize Optimizer Logic with Full Autograd Support
+### 1. Modularize Optimizer Logic with Full Autograd Support
 
 This includes: 
 - Replace optax with a pure autograd-compatible optimizer (e.g., SGD or Adam variants you write or wrap)
 - Cleanly separate optimizer logic into a new optimizer.py
 - Provide a flexible optimizer interface (pluggable optimizer)
 
-2. Logging and History Management
+### 2. Logging and History Management
 
 The current framework stores simulation and flux histories. A future work could include a more structured **result management system**, which automatically saves:
 - design parameters
@@ -52,7 +52,7 @@ results/
 ...
 ```
 
-3. Refactor into a Professional Python Package
+### 3. Refactor into a Professional Python Package
 
 Currently, everything lives in one notebook. The objectives of a professionally packaged code: 
 - Make collaboration easier
@@ -86,7 +86,7 @@ meta_atom_optimizer/
 └── .gitignore                  # Files and folders excluded from version control
 ```
 
-4. Add Multi-Objective Support (e.g., Bandwidth + Impedance Matching)
+### 4. Add Multi-Objective Support (e.g., Bandwidth + Impedance Matching)
 
 The current objective function can be naturally extended to simultaneously optimize for:
 - Broadband absorption, and
@@ -94,4 +94,4 @@ The current objective function can be naturally extended to simultaneously optim
 
 This requires minimal structural change: just update `objective_fn()` to combine multiple loss terms.
 
-5. More Flexibility in Geometry Update 
+### 5. More Flexibility in Geometry Update 
